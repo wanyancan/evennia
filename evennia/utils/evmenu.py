@@ -544,7 +544,7 @@ class EvMenu(object):
         cmd = raw_string.strip().lower()
         allow_quit = self.allow_quit
 
-        if cmd in self.options:
+        if self.options and cmd in self.options:
             # this will take precedence over the default commands
             # below
             goto, callback = self.options[cmd]
